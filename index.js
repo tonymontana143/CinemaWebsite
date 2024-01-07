@@ -27,6 +27,7 @@ function cellClicked(){
     const cellIndex = this.getAttribute("cellIndex");
 
     if(options[cellIndex] != "" || !running){
+        statusText.textContent="cell is busy";
         return;
     }
 
@@ -71,10 +72,10 @@ function checkWinner(){
         changePlayer();
     }
 }
-// function restartGame(){
-//     currentPlayer = "X";
-//     options = ["", "", "", "", "", "", "", "", ""];
-//     statusText.textContent = `${currentPlayer}'s turn`;
-//     cells.forEach(cell => cell.textContent = "");
-//     running = true;
-// }
+function restartGame(){
+    currentPlayer = "X";
+    options = ["", "", "", "", "", "", "", "", ""];
+    statusText.textContent = `${currentPlayer}'s turn`;
+    cells.forEach(cell => cell.textContent = "");
+    running = true;
+}
