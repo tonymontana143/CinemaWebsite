@@ -9,15 +9,16 @@
 <body>
   <div class="login-box">
     <h1>LogIn</h1>
-    <form>
+    <form id="loginForm">
       <label>Nickname</label><br>
-      <input type="text" placeholder=""><br>
+      <input type="text" id="username" placeholder=""><br>
       <label>Password</label><br>
-      <input type="password" placeholder=""><br>
-      <input type="button" value="Submit">
+      <input type="password" id="password" placeholder=""><br>
+      <input type="button" value="Submit" onclick="handleLogin()">
     </form>
   </div>
   <p class="para-2">Do not have an account? <a href="/register.html">SignIn here!</a></p>
-  
+
+  <script src="app.js"></script>
 </body>
 </html>

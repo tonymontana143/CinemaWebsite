@@ -1,26 +1,25 @@
-const express = require('express')
-const PORT = process.env.PORT || 3000
-const mongoose = require('mongoose')
+const express = require('express');
+const mongoose = require('mongoose');
+const cors = require('cors'); // Import cors
 
-const app = express()
+const authRouter = require('./authRouter');
+const PORT = process.env.PORT || 5000;
 
+const app = express();
 
-async function start(){
+app.use(cors()); // Use cors middleware
+app.use(express.json());
+app.use('/auth', authRouter);
+
+const start = async () => {
     try {
-    await mongoose.connect('mongodb+srv://iliias:<q1w2e3r4>@cluster0.oibualh.mongodb.net/?retryWrites=true&w=majority')
-    app.listen(PORT,()=>{
-        console.log('Server has been started...')
+        await mongoose.connect(
+            'mongodb+srv://raviollll9874:ATBKVuVjzVGZQTFX@gamedb.0edk99n.mongodb.net/?retryWrites=true&w=majority'
+        );
+        app.listen(PORT, () => console.log(`server started on port ${PORT}`));
+    } catch (e) {
+        console.log(e);
     }
-    )
-    }
-    catch(e){
-        console.log(e)
-    }
+};
 
-}
-
-start()
-
-
-
-
+start();
