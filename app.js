@@ -1,10 +1,13 @@
 const API_URL = 'http://localhost:5000/auth';
 let token = null;
 
+
+
 const handleRegistration = async () => {
     const username = document.getElementById('username').value;
     const password = document.getElementById('password').value;
     const password2 = document.getElementById('confirmPassword').value;
+
     if(password == password2){
     try {
         const response = await fetch(`${API_URL}/registration`, {
@@ -49,6 +52,7 @@ const handleLogin = async () => {
         console.error('Login error:', error);
     }
 };
+
 const gotohome = async () => {
     window.location.href = 'login.html';
 }

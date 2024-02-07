@@ -62,12 +62,13 @@ class authController{
 
     async getUsers(req, res){
         try {
-            const users = await User.find()
-            res.json(users)
-        }catch(e){
-            console.log(e)
+            const users = await User.find().select('username bestResult').sort({bestResult: -1}).limit(10);
+            res.json(users);
+        } catch(e) {
+            console.log(e);
         }
     }
+    
 }
 
 module.exports = new authController()
