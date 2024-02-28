@@ -1,4 +1,4 @@
-const API_URL = 'http://localhost:5000/auth';
+const API_URL = 'http://localhost:5001/auth';
 let token = null;
 
 
@@ -55,6 +55,10 @@ const handleLogin = async () => {
 
 const gotohome = async () => {
     window.location.href = 'login.html';
+}
+
+const gotogame = async () => {
+    window.location.href = '\MiniGames\checkers-game\index.html';
 }
 
 const handleGetUsers = async () => {
