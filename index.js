@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const cors = require('cors'); // Import cors
 
 const authRouter = require('./authRouter');
-const PORT = process.env.PORT || 5001;
+const PORT = process.env.PORT || 80;
 
 const app = express();
 

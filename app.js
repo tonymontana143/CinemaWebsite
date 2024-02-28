@@ -1,4 +1,4 @@
-const API_URL = 'http://localhost:5001/auth';
+const API_URL = 'https://minigames-qe6p.onrender.com/';
 let token = null;
 
 
