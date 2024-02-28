@@ -66,3 +66,26 @@ p{
 .para-2 a {
   color: #ff239a;
 }
+button {
+  padding: 10px 20px; /* задаем внутренний отступ кнопки */
+  font-size: 16px; /* задаем размер шрифта */
+  border: none; /* убираем границу кнопки */
+  cursor: pointer; /* меняем курсор при наведении на кнопку */
+  background-color: #ff239a; /* цвет фона кнопки */
+  color: white; /* цвет текста кнопки */
+  border-radius: 5px; /* скругляем углы кнопки */
+  margin-right: 10px; /* добавляем отступ справа */
+}
+
+button:hover {
+  background-color: #7092e9; 
+}
+
+button:active {
+  background-color: #B2C6F9; 
+}
+.login-box {
+  display: grid;
+  place-items: center; 
+  text-align: center;
+}
